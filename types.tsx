@@ -11,6 +11,7 @@ export type RootStackParamList = {
 export type BottomTabParamList = {
   TabOne: undefined;
   TabTwo: undefined;
+  Span: undefined;
 };
 
 export type TabOneParamList = {
@@ -20,3 +21,13 @@ export type TabOneParamList = {
 export type TabTwoParamList = {
   TabTwoScreen: undefined;
 };
+
+export type SpanWaifuParamList = {
+  SpanWaifuScreen: undefined;
+}
+
+export type IShackBar = {
+  type: 'info' | 'error' | 'warning' | 'success';
+  open: boolean;
+  message: string;
+}

@@ -1,4 +1,5 @@
-const baseURL = 'http://192.168.1.3:3000/api/';
+const baseURL = 'https://waifulistbotapi.herokuapp.com/api/';
+// const baseURL = 'http://192.168.1.3:3000/api/';
 
 const get = async (url: string): Promise<any> => {
   console.log('llamando a ', baseURL + url);

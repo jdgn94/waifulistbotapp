@@ -134,9 +134,11 @@ export default function AutocompleteComponent({ type, setSelectValue, label }: I
       />
       {
         viewResult && (
-          <ScrollView style={styles.menu}>
-            {_renderOptions()}
-          </ScrollView>
+          <View style={{ paddingHorizontal: 5 }}>
+            <ScrollView style={styles.menu}>
+              {_renderOptions()}
+            </ScrollView>
+          </View>
         )
       }
     </View>
@@ -146,15 +148,20 @@ export default function AutocompleteComponent({ type, setSelectValue, label }: I
 const styles = StyleSheet.create({
   menu: {
     width: "100%",
-    position: "absolute",
-    maxHeight: 300,
+    // position: "absolute",
+    maxHeight: 500,
     minHeight: 50,
-    elevation: 5,
-    shadowRadius: 5,
     borderRadius: 10,
     marginTop: 5,
     zIndex: 1,
-    top: 65
+    // top: 65,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   dismisFetch: {
     position: "relative",

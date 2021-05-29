@@ -17,9 +17,9 @@ export default {
               SpanWaifuScreen: "span",
             },
           },
-          TabTwo: {
+          Active: {
             screens: {
-              TabTwoScreen: "two",
+              ActiveWaifuScreen: "active",
             },
           },
         },

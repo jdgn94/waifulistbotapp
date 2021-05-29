@@ -10,10 +10,10 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
+import ActiveWaifuScreen from '../screens/ActiveWaifuScreen';
 import SpanWaifuScreen from '../screens/SpanWaifuScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList, SpanWaifuParamList } from '../types';
+import { BottomTabParamList, SpanWaifuParamList, ActiveWaifuParamList } from '../types';
 
 import Header from '../components/Header';
 
@@ -24,20 +24,13 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Span"
       screenOptions={{
       }}
       tabBarOptions={{
         activeTintColor: Colors[colorScheme].tint
       }}
     >
-      {/* <BottomTab.Screen
-        name="TabOne"
-        component={TabOneNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-        }}
-      /> */}
       <BottomTab.Screen
         name="Span"
         component={SpanWaifuNavigation}
@@ -45,9 +38,16 @@ export default function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="face-woman" color={color} />,
         }}
       />
-      <BottomTab.Screen
+      {/* <BottomTab.Screen
         name="TabTwo"
         component={TabTwoNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="code-array" color={color} />,
+        }}
+      /> */}
+      <BottomTab.Screen
+        name="Active"
+        component={ActiveWaifuNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="code-array" color={color} />,
         }}
@@ -85,17 +85,17 @@ function SpanWaifuNavigation() {
   );
 }
 
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
+const TabTwoStack = createStackNavigator<ActiveWaifuParamList>();
 
-function TabTwoNavigator() {
+function ActiveWaifuNavigator() {
   return (
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
+        name="ActiveWaifuScreen"
+        component={ActiveWaifuScreen}
         options={{
           header,
-          headerTitle: 'Tab Two Title'
+          headerTitle: 'Active Waifu Chats'
         }}
       />
     </TabTwoStack.Navigator>

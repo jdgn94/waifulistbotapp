@@ -9,21 +9,16 @@ export type RootStackParamList = {
 };
 
 export type BottomTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
   Span: undefined;
-};
-
-export type TabOneParamList = {
-  TabOneScreen: undefined;
-};
-
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+  Active: undefined;
 };
 
 export type SpanWaifuParamList = {
   SpanWaifuScreen: undefined;
+}
+
+export type ActiveWaifuParamList = {
+  ActoveWaifuScreen: undefined;
 }
 
 export type IShackBar = {
